@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+
+        function getName(){
+            return "Hulk Hogan for Prez!"
+        }
+
+        const hulk = "http://www.thestar.com/content/dam/thestar/entertainment/2016/03/20/turning-the-clock-back-on-wrestlemania-vi/hulkhogan.jpg";
+        
+        // ReactDOM.render takes 2 args:
+        // 1. What
+        // 1b. - You can provide ONE, and only ONE element.
+        // That element can have a zillion childrend.
+        // 2. Where
+        ReactDOM.render(
+            <div>
+                <h1>I love React {2+8} times! My manta is {getName()}</h1>
+                <img src={hulk} />
+            </div>,
+            document.getElementById('root'),
+        )
+    </script>
+
+</body>
+</html>
