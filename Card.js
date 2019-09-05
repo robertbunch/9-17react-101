@@ -11,11 +11,11 @@ function Card(props){
             <div className="col s2">
                 <div className="card hoverable small">
                     <div className="card-image">
-                        <img src={props.img} />
+                        <img src={props.data.image} />
                     </div>
                     <div className="card-content">
-                        <p>{props.title}</p>
-                        <p>{props.name}</p>
+                        <p>{props.data.instructor}</p>
+                        <p>{props.data.course}</p>
                     </div>
                     <div className="card-action">
                         <a href="#">${props.saleOn ? 9.99 : 59.99}</a>
